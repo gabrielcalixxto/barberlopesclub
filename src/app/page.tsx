@@ -614,7 +614,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Lado esquerdo - Texto */}
-              <div>
+              <div className="text-center lg:text-left">
                 <h2 className="text-4xl font-bold text-gray-900 mb-8">
                   NOSSOS SERVIÇOS
                 </h2>
@@ -622,127 +622,130 @@ export default function Home() {
                   Mais de uma década de experiência com tradições e tendências.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-12">
-                  Oferecemos uma experiência completa com produtos de qualidade e técnicas modernas para todos os estilos.
+                  Oferecemos uma experiência completa com produtos de qualidade e técnicas modernas para todos os estilos ✨
                 </p>
-                <a href="#galeria" className="botao-ousado inline-block text-white font-bold py-4 px-12 uppercase tracking-wider transition-all duration-300 transform hover:scale-105">
+                <a
+                  href="#galeria"
+                  className="botao-ousado mx-auto lg:mx-0 text-white font-bold py-4 px-12 uppercase tracking-wider transition-all duration-300 transform hover:scale-105 block w-max"
+                >
                   VER GALERIA
                 </a>
               </div>
 
               {/* Lado direito - Lista de preços */}
-              <div className="space-y-6">
-                <div className="flex items-center justify-between py-4 border-b border-gray-200">
-                  <div className="flex items-center gap-4">
-                    <div className="w-8 h-8">
-                      <svg viewBox="0 0 24 24" fill="currentColor" className="text-gray-600">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-                      </svg>
+              <section className="relative">
+                <div className="space-y-6 max-w-xl mx-auto relative z-10">
+                  <div className="flex items-center justify-between py-4 border-b border-gray-200">
+                    <div className="flex items-center gap-4">
+                      <div className="w-8 h-8">
+                        <img src="/assets/maquina.png" alt="Tesoura" className="w-full h-10" />
+                      </div>
+                      <span className="text-lg font-medium text-gray-800">CORTE</span>
                     </div>
-                    <span className="text-lg font-medium text-gray-800">CORTE</span>
+                    <span className="text-xl font-bold text-gray-900">30,00</span>
                   </div>
-                  <span className="text-xl font-bold text-gray-900">30,00</span>
+
+                  <div className="flex items-center justify-between py-4 border-b border-gray-200">
+                    <div className="flex items-center gap-4">
+                      <div className="w-8 h-8">
+                        <img src="/assets/navalha.png" alt="Tesoura" className="w-full h-10" />
+                      </div>
+                      <span className="text-lg font-medium text-gray-800">BARBA</span>
+                    </div>
+                    <span className="text-xl font-bold text-gray-900">20,00</span>
+                  </div>
+
+                  <div className="flex items-center justify-between py-4 border-b border-gray-200">
+                    <div className="flex items-center gap-4">
+                      <div className="w-8 h-8">
+                        <img src="/assets/tesoura.png" alt="Tesoura" className="w-full h-10" />
+                      </div>
+                      <span className="text-lg font-medium text-gray-800">CABELO E BARBA</span>
+                    </div>
+                    <span className="text-xl font-bold text-gray-900">45,00</span>
+                  </div>
+
+                  <div className="flex items-center justify-between py-4 border-b border-gray-200">
+                    <div className="flex items-center gap-4">
+                      <div className="w-8 h-8">
+                        <img src="/assets/barber.png" alt="Tesoura" className="w-full h-10" />
+                      </div>
+                      <span className="text-lg font-medium text-gray-800">SOMBRANCELHA</span>
+                    </div>
+                    <span className="text-xl font-bold text-gray-900">5,00</span>
+                  </div>
+
+                  <div className="flex items-center justify-between py-4">
+                    <div className="flex items-center gap-4">
+                      <div className="w-8 h-8">
+                        <img src="/assets/pincel.png" alt="Tesoura" className="w-full h-8" />
+                      </div>
+                      <span className="text-lg font-medium text-gray-800">PEZINHO</span>
+                    </div>
+                    <span className="text-xl font-bold text-gray-900">10,00</span>
+                  </div>
                 </div>
 
-                <div className="flex items-center justify-between py-4 border-b border-gray-200">
-                  <div className="flex items-center gap-4">
-                    <div className="w-8 h-8">
-                      <svg viewBox="0 0 24 24" fill="currentColor" className="text-gray-600">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-                      </svg>
-                    </div>
-                    <span className="text-lg font-medium text-gray-800">BARBA</span>
-                  </div>
-                  <span className="text-xl font-bold text-gray-900">20,00</span>
+                {/* Logo marca d'água */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 pointer-events-none z-0 w-[600px] h-auto">
+                  <img
+                    src="/assets/logooriginal.jpeg"
+                    alt="Logo"
+                    className="object-contain"
+                    width={600}
+                    height={600}
+                  />
                 </div>
-
-                <div className="flex items-center justify-between py-4 border-b border-gray-200">
-                  <div className="flex items-center gap-4">
-                    <div className="w-8 h-8">
-                      <svg viewBox="0 0 24 24" fill="currentColor" className="text-gray-600">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-                      </svg>
-                    </div>
-                    <span className="text-lg font-medium text-gray-800">CABELO E BARBA</span>
-                  </div>
-                  <span className="text-xl font-bold text-gray-900">45,00</span>
-                </div>
-
-                <div className="flex items-center justify-between py-4 border-b border-gray-200">
-                  <div className="flex items-center gap-4">
-                    <div className="w-8 h-8">
-                      <svg viewBox="0 0 24 24" fill="currentColor" className="text-gray-600">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-                      </svg>
-                    </div>
-                    <span className="text-lg font-medium text-gray-800">SOMBRANCELHA</span>
-                  </div>
-                  <span className="text-xl font-bold text-gray-900">5,00</span>
-                </div>
-
-                <div className="flex items-center justify-between py-4">
-                  <div className="flex items-center gap-4">
-                    <div className="w-8 h-8">
-                      <svg viewBox="0 0 24 24" fill="currentColor" className="text-gray-600">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-                      </svg>
-                    </div>
-                    <span className="text-lg font-medium text-gray-800">PEZINHO</span>
-                  </div>
-                  <span className="text-xl font-bold text-gray-900">10,00</span>
-                </div>
-              </div>
+              </section>
             </div>
-          </div>
-          {/* Logo marca d'água */}
-          <div className="absolute top-1/2 right-[6%] transform -translate-y-1/2 opacity-10 pointer-events-none">
-            <img
-              src="/assets/logooriginal.jpeg"
-              alt="Logo"
-              className="object-contain mr-48"
-              width={720}
-              height={720}
-            />
           </div>
         </section>
 
         {/* Location Section */}
-        <section id="unidade" className="py-20 bg-gray-100">
+        <section id="contato" className="py-20 bg-gray-100">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4 text-gray-900">Nossa Unidade</h2>
-              <p className="text-xl text-gray-600">Localização privilegiada no coração da cidade</p>
+              <h2 className="text-4xl font-bold mb-4 mt-8 text-gray-900">Nossa Unidade</h2>
+              <p className="text-xl text-gray-600">Localização privilegiada no coração da cidade 🏙️📌</p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div id="contato">          <div className="space-y-6 mb-8">
-                <div className="flex items-center">
-                  <span className="text-blue-600 text-2xl mr-4">📍</span>
-                  <div>
-                    <p className="font-semibold text-lg">Endereço</p>
-                    <p className="text-gray-600">Av. 28 de Março, N° 560 - Parque Avenida Pelinca, Campos dos Goytacazes - RJ, 28020-740. Ao Lado do Shopping</p>
+            <div className="grid gap-12 items-center text-center lg:text-left lg:grid-cols-2">
+              <div>
+                <div className="space-y-6 mb-8">
+                  <div className="flex justify-center lg:justify-start items-center gap-4">
+                    <span className="text-blue-600 text-2xl">📍</span>
+                    <div>
+                      <p className="font-semibold text-lg">Endereço</p>
+                      <p className="text-gray-600">
+                        Av. 28 de Março, N° 560 - Parque Avenida Pelinca, Campos dos Goytacazes - RJ, 28020-740. Ao Lado do Shopping
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex justify-center lg:justify-start items-center gap-4">
+                    <span className="text-blue-600 text-2xl">🕐</span>
+                    <div>
+                      <p className="font-semibold text-lg">Horário de Funcionamento</p>
+                      <p className="text-gray-600">Seg-Sex: 9h às 20h | Sáb: 9h às 17h</p>
+                    </div>
+                  </div>
+                  <div className="flex justify-center lg:justify-start items-center gap-4">
+                    <span className="text-blue-600 text-2xl">📞</span>
+                    <div>
+                      <p className="font-semibold text-lg">Telefone</p>
+                      <p className="text-gray-600">(22) 99736-4126</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-center">
-                  <span className="text-blue-600 text-2xl mr-4">🕐</span>
-                  <div>
-                    <p className="font-semibold text-lg">Horário de Funcionamento</p>
-                    <p className="text-gray-600">Seg-Sex: 9h às 20h | Sáb: 9h às 17h</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <span className="text-blue-600 text-2xl mr-4">📞</span>
-                  <div>
-                    <p className="font-semibold text-lg">Telefone</p>
-                    <p className="text-gray-600">(22) 99736-4126</p>
-                  </div>
-                </div>
-              </div>          <button
-                onClick={openAgendamentoModal}
-                className="botao-ousado inline-block text-white font-bold py-4 px-12 uppercase tracking-wider transition-all duration-300 transform hover:scale-105"
-              >
+
+                <button
+                  onClick={openAgendamentoModal}
+                  className="botao-ousado inline-block text-white font-bold py-4 px-12 uppercase tracking-wider transition-all duration-300 transform hover:scale-105"
+                >
                   AGENDAR PELO WHATSAPP
                 </button>
-              </div>          <div className="grid grid-cols-1 gap-4 ">
+              </div>
+
+              <div className="grid grid-cols-1 gap-4">
                 <img
                   src="/assets/foto-unidade-1.jpeg"
                   alt="Interior da Unidade"
@@ -759,18 +762,19 @@ export default function Home() {
                 />
               </div>
             </div>
-          </div>          </section>
+          </div>
+        </section>
 
         {/* Gallery Section */}
         <section id="galeria" className="py-20 bg-white">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4 text-gray-900">Galeria de Cortes</h2>
-              <p className="text-xl text-gray-600">Alguns dos nossos trabalhos recentes</p>
+              <h2 className="text-4xl font-bold mb-4 mt-8 text-gray-900">Galeria de Cortes</h2>
+              <p className="text-xl text-gray-600">✂️✨ Alguns dos nossos trabalhos recentes ✨✂️</p>
             </div>          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="group relative overflow-hidden shadow-lg">
                 <img
-                  src="/assets/corte1.svg"
+                  src="/assets/corte1.png"
                   alt="Corte Moderno"
                   className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                   width={400}
@@ -782,7 +786,7 @@ export default function Home() {
               </div>
               <div className="group relative overflow-hidden shadow-lg">
                 <img
-                  src="/assets/corte2.svg"
+                  src="/assets/corte2.jpeg"
                   alt="Barba Estilizada"
                   className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                   width={400}
@@ -794,7 +798,7 @@ export default function Home() {
               </div>
               <div className="group relative overflow-hidden shadow-lg">
                 <img
-                  src="/assets/corte3.svg"
+                  src="/assets/corte3.png"
                   alt="Combo Completo"
                   className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                   width={400}
@@ -806,7 +810,7 @@ export default function Home() {
               </div>
               <div className="group relative overflow-hidden shadow-lg">
                 <img
-                  src="/assets/corte4.svg"
+                  src="/assets/corte4.png"
                   alt="Estilo Clássico"
                   className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                   width={400}
@@ -818,7 +822,7 @@ export default function Home() {
               </div>
               <div className="group relative overflow-hidden shadow-lg">
                 <img
-                  src="/assets/corte1.svg"
+                  src="/assets/corte5.png"
                   alt="Degradê Moderno"
                   className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                   width={400}
@@ -830,7 +834,7 @@ export default function Home() {
               </div>
               <div className="group relative overflow-hidden shadow-lg">
                 <img
-                  src="/assets/corte2.svg"
+                  src="/assets/corte6.png"
                   alt="Corte Social"
                   className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                   width={400}
@@ -842,7 +846,7 @@ export default function Home() {
               </div>
               <div className="group relative overflow-hidden shadow-lg">
                 <img
-                  src="/assets/corte3.svg"
+                  src="/assets/corte7.png"
                   alt="Estilo Executivo"
                   className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                   width={400}
@@ -854,7 +858,7 @@ export default function Home() {
               </div>
               <div className="group relative overflow-hidden shadow-lg">
                 <img
-                  src="/assets/corte4.svg"
+                  src="/assets/corte8.png"
                   alt="Barba Completa"
                   className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                   width={400}
@@ -868,25 +872,25 @@ export default function Home() {
           </div>
         </section>          {/* CTA Section */}
         <section id="agendamento" className="py-20 bg-gradient-to-r from-gray-900 to-black text-white">
-          <div className="max-w-6xl mx-auto px-80">
+          <div className="max-w-6xl mx-auto px-4 sm:px-8 md:px-16">
             <div className="grid gap-0">
               {/* Contato */}
               <div className="from-gray-900 text-white text-center">
-                <div className="grid grid-cols-1 md:grid-cols-2 items-center from-gray-900 to-black text-white">
-                  <div className="from-gray-900  text-white">
+                <div className="grid grid-cols-1 md:grid-cols-2 items-center from-gray-900 to-black text-white gap-8">
+                  <div className="from-gray-900 text-white flex justify-center mb-8 md:mb-0">
                     <img
                       src="/assets/lopesclubicon.png"
                       alt="logo2"
-                      className="w-48 h-48"
+                      className="w-64 h-64 md:w-64 md:h-64"
                       width={400}
                       height={256}
                     />
                   </div>
-                  <div className="text-center">
-                    <h1 className="text-3xl font-bold whitespace-nowrap mb-5">Agende seu horário</h1>
+                  <div className="text-center md:text-center">
+                    <h1 className="text-2xl md:text-3xl font-bold whitespace-nowrap mb-5">🚀 Agende seu horário 🚀</h1>
                     <button
                       onClick={openAgendamentoModal}
-                      className="botao-ousado inline-block text-white font-bold py-4 px-12 uppercase tracking-wider transition-all duration-300 transform hover:scale-105"
+                      className="botao-ousado inline-block text-white font-bold py-3 px-8 md:py-4 md:px-12 uppercase tracking-wider transition-all duration-300 transform hover:scale-105"
                     >
                       AGENDAR AGORA
                     </button>
