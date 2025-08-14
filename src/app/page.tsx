@@ -571,9 +571,9 @@ export default function Home() {
 
   const switchToLogin = () => {
     setIsCadastroModalOpen(false);
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     setIsLoginModalOpen(true);
   };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleLoginSuccess = (userData: any) => { // Using 'any' for mock
     // Salvar usuário no localStorage (já feito no modal)
     window.dispatchEvent(new CustomEvent('userLoggedIn', { detail: userData }));
