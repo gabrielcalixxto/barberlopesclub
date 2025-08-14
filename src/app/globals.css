@@ -1,0 +1,161 @@
+/* 
+ * Tailwind CSS imports
+ * Estas diretivas são processadas pelo PostCSS + Tailwind
+ * @note: Os warnings sobre @tailwind e @apply são normais e podem ser ignorados
+ */
+/* eslint-disable-next-line */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap');
+
+@layer base {
+  body {
+    font-family: 'Roboto', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .navText {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.8s ease-out;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Custom hover effects */
+.navText:hover {
+  transform: scale(1.05);
+  color: #facc15;
+}
+
+/* Modern button styles */
+.btn-primary:hover {
+  background: linear-gradient(135deg, #eab308, #ca8a04);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(234, 179, 8, 0.3);
+}
+
+/* Card hover effects */
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* anima uma vez ao carregar */
+.botao-ousado {
+  background: linear-gradient(270deg, #3b5bfd, #007cf0, #23348a, #3b5bfd);
+  background-size: 800% 800%;
+  background-position: 0% 50%;
+  animation: gradientMove 4s ease forwards;
+  box-shadow: 0 0 12px #3b5bfd99, 0 0 25px #000000cc;
+  border: 2px solid #3b5bfd66;
+  transition: all 0.3s ease;
+}
+
+/* anima novamente ao hover */
+.botao-ousado:hover {
+  box-shadow: 0 0 20px #3b5bfdcc, 0 0 30px #000000cc;
+  transform: scale(1.08);
+}
