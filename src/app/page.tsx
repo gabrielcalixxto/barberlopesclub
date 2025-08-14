@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { useState, useEffect } from "react";
 
 // Mock API utility embedded directly for compilation in this environment
