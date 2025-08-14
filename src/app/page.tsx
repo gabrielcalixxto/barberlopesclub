@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from "react";
+export const dynamic = 'force-dynamic';
 
 // Mock API utility embedded directly for compilation in this environment
 // In a real application, this would be in a separate file like "@/app/utils/api"
