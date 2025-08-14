@@ -11,7 +11,7 @@ export const API_CONFIG = {
   },
 };
 
-export async function apiRequest(endpoint, options) {
+export async function apiRequest(endpoint: string, options: RequestInit) {
   console.log(`Mock API Request to: ${endpoint}`);
   console.log('Options:', options);
 
@@ -257,10 +257,11 @@ interface LoginModalProps {
   isOpen: boolean;
   onClose: () => void;
   onSwitchToCadastro: () => void;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onLoginSuccess: (userData: any) => void; // Using 'any' for mock
 }
 
-function LoginModal({ isOpen, onClose, onSwitchToCadastro, onLoginSuccess }: LoginModalProps) {
+function LoginModal({ isOpen, onClose, onSwitchToCadastro}: LoginModalProps) {
   if (!isOpen) return null;
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] flex items-center justify-center p-4">
@@ -570,6 +571,7 @@ export default function Home() {
 
   const switchToLogin = () => {
     setIsCadastroModalOpen(false);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     setIsLoginModalOpen(true);
   };
   const handleLoginSuccess = (userData: any) => { // Using 'any' for mock
@@ -578,9 +580,6 @@ export default function Home() {
     setIsAgendamentoModalOpen(true); // Abrir modal de agendamento após login
   };
 
-  const handleLoginRequired = () => {
-    setIsLoginModalOpen(true);
-  };
 
   return (
     <>
