@@ -4,27 +4,27 @@ export const dynamic = 'force-dynamic';
 
 // Mock API utility embedded directly for compilation in this environment
 // In a real application, this would be in a separate file like "@/app/utils/api"
-export const API_CONFIG = {
-  endpoints: {
-    agendamentos: {
-      criar: '/api/agendamentos/criar', // Mock endpoint path
-    },
-  },
-};
+// export const API_CONFIG = {
+//   endpoints: {
+//     agendamentos: {
+//       criar: '/api/agendamentos/criar', // Mock endpoint path
+//     },
+//   },
+// };
 
-export async function apiRequest(endpoint: string, options: RequestInit) {
-  console.log(`Mock API Request to: ${endpoint}`);
-  console.log('Options:', options);
+// export async function apiRequest(endpoint: string, options: RequestInit) {
+//   console.log(`Mock API Request to: ${endpoint}`);
+//   console.log('Options:', options);
 
-  // Simulate a network delay
-  await new Promise(resolve => setTimeout(resolve, 500));
+//   // Simulate a network delay
+//   await new Promise(resolve => setTimeout(resolve, 500));
 
-  // Simulate a successful response
-  return { message: 'Mock data saved successfully!' };
+//   // Simulate a successful response
+//   return { message: 'Mock data saved successfully!' };
 
-  // If you want to simulate an error, uncomment the line below:
-  // throw new Error('Mock API Error: Failed to save data.');
-}
+//   // If you want to simulate an error, uncomment the line below:
+//   // throw new Error('Mock API Error: Failed to save data.');
+// }
 
 // --- AgendamentoModal Component (Embedded) ---
 interface AgendamentoModalProps {
@@ -83,11 +83,11 @@ function AgendamentoModal({ isOpen, onClose }: AgendamentoModalProps) {
           data: formData.data,
           horario: formData.horario,
         };
-        const response = await apiRequest(API_CONFIG.endpoints.agendamentos.criar, {
-          method: 'POST',
-          body: JSON.stringify(agendamentoData)
-        });
-        console.log('Agendamento salvo com sucesso no backend:', response);
+        // // const response = await apiRequest(API_CONFIG.endpoints.agendamentos.criar, {
+        //   method: 'POST',
+        //   body: JSON.stringify(agendamentoData)
+        // });
+        // console.log('Agendamento salvo com sucesso no backend:', response);
       } catch (apiError) {
         console.error('Erro ao salvar no backend:', apiError);
         console.warn('Agendamento não foi salvo no sistema, mas será enviado via WhatsApp.');
@@ -359,11 +359,11 @@ function AgendamentoModalSlogin({ isOpen, onClose }: AgendamentoModalProps) {
           data: formData.data,
           horario: formData.horario,
         };
-        const response = await apiRequest(API_CONFIG.endpoints.agendamentos.criar, {
-          method: 'POST',
-          body: JSON.stringify(agendamentoData)
-        });
-        console.log('Agendamento salvo com sucesso no backend:', response);
+        // const response = await apiRequest(API_CONFIG.endpoints.agendamentos.criar, {
+        //   method: 'POST',
+        //   body: JSON.stringify(agendamentoData)
+        // });
+        // console.log('Agendamento salvo com sucesso no backend:', response);
       } catch (apiError) {
         console.error('Erro ao salvar no backend:', apiError);
         console.warn('Agendamento não foi salvo no sistema, mas será enviado via WhatsApp.');
