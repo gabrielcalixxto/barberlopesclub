@@ -74,24 +74,24 @@ function AgendamentoModal({ isOpen, onClose }: AgendamentoModalProps) {
     setLoading(true);
 
     try {
-      try {
-        console.log('Tentando salvar agendamento no backend...');
-        const agendamentoData = {
-          nome: formData.nome,
-          telefone: formData.telefone,
-          servico: formData.servico,
-          data: formData.data,
-          horario: formData.horario,
-        };
+      // try {
+      //   console.log('Tentando salvar agendamento no backend...');
+      //   const agendamentoData = {
+      //     nome: formData.nome,
+      //     telefone: formData.telefone,
+      //     servico: formData.servico,
+      //     data: formData.data,
+      //     horario: formData.horario,
+      //   };
         // // const response = await apiRequest(API_CONFIG.endpoints.agendamentos.criar, {
         //   method: 'POST',
         //   body: JSON.stringify(agendamentoData)
         // });
         // console.log('Agendamento salvo com sucesso no backend:', response);
-      } catch (apiError) {
-        console.error('Erro ao salvar no backend:', apiError);
-        console.warn('Agendamento não foi salvo no sistema, mas será enviado via WhatsApp.');
-      }
+      // } catch (apiError) {
+      //   console.error('Erro ao salvar no backend:', apiError);
+      //   console.warn('Agendamento não foi salvo no sistema, mas será enviado via WhatsApp.');
+      // }
 
       const servicoSelecionado = servicos.find(s => s.id === formData.servico);
       const dataFormatada = new Date(formData.data).toLocaleDateString('pt-BR');
@@ -350,24 +350,24 @@ function AgendamentoModalSlogin({ isOpen, onClose }: AgendamentoModalProps) {
     setLoading(true);
 
     try {
-      try {
-        console.log('Tentando salvar agendamento no backend...');
-        const agendamentoData = {
-          nome: formData.nome,
-          telefone: formData.telefone,
-          servico: formData.servico,
-          data: formData.data,
-          horario: formData.horario,
-        };
+      // try {
+      //   console.log('Tentando salvar agendamento no backend...');
+      //   const agendamentoData = {
+      //     nome: formData.nome,
+      //     telefone: formData.telefone,
+      //     servico: formData.servico,
+      //     data: formData.data,
+      //     horario: formData.horario,
+      //   };
         // const response = await apiRequest(API_CONFIG.endpoints.agendamentos.criar, {
         //   method: 'POST',
         //   body: JSON.stringify(agendamentoData)
         // });
         // console.log('Agendamento salvo com sucesso no backend:', response);
-      } catch (apiError) {
-        console.error('Erro ao salvar no backend:', apiError);
-        console.warn('Agendamento não foi salvo no sistema, mas será enviado via WhatsApp.');
-      }
+      // } catch (apiError) {
+      //   console.error('Erro ao salvar no backend:', apiError);
+      //   console.warn('Agendamento não foi salvo no sistema, mas será enviado via WhatsApp.');
+      // }
 
       const servicoSelecionado = servicos.find(s => s.id === formData.servico);
       const dataFormatada = new Date(formData.data).toLocaleDateString('pt-BR');
