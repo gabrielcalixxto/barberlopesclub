@@ -82,11 +82,11 @@ function AgendamentoModal({ isOpen, onClose }: AgendamentoModalProps) {
       //     data: formData.data,
       //     horario: formData.horario,
       //   };
-      // // const response = await apiRequest(API_CONFIG.endpoints.agendamentos.criar, {
-      //   method: 'POST',
-      //   body: JSON.stringify(agendamentoData)
-      // });
-      // console.log('Agendamento salvo com sucesso no backend:', response);
+        // // const response = await apiRequest(API_CONFIG.endpoints.agendamentos.criar, {
+        //   method: 'POST',
+        //   body: JSON.stringify(agendamentoData)
+        // });
+        // console.log('Agendamento salvo com sucesso no backend:', response);
       // } catch (apiError) {
       //   console.error('Erro ao salvar no backend:', apiError);
       //   console.warn('Agendamento não foi salvo no sistema, mas será enviado via WhatsApp.');
@@ -261,7 +261,7 @@ interface LoginModalProps {
   onLoginSuccess: (userData: any) => void; // Using 'any' for mock
 }
 
-function LoginModal({ isOpen, onClose, onSwitchToCadastro }: LoginModalProps) {
+function LoginModal({ isOpen, onClose, onSwitchToCadastro}: LoginModalProps) {
   if (!isOpen) return null;
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] flex items-center justify-center p-4">
@@ -357,11 +357,11 @@ function AgendamentoModalSlogin({ isOpen, onClose }: AgendamentoModalProps) {
       //     data: formData.data,
       //     horario: formData.horario,
       //   };
-      // const response = await apiRequest(API_CONFIG.endpoints.agendamentos.criar, {
-      //   method: 'POST',
-      //   body: JSON.stringify(agendamentoData)
-      // });
-      // console.log('Agendamento salvo com sucesso no backend:', response);
+        // const response = await apiRequest(API_CONFIG.endpoints.agendamentos.criar, {
+        //   method: 'POST',
+        //   body: JSON.stringify(agendamentoData)
+        // });
+        // console.log('Agendamento salvo com sucesso no backend:', response);
       // } catch (apiError) {
       //   console.error('Erro ao salvar no backend:', apiError);
       //   console.warn('Agendamento não foi salvo no sistema, mas será enviado via WhatsApp.');
@@ -596,7 +596,7 @@ export default function Home() {
 
           <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6 pt-32">
             <div className="animate-fadeInUp">
-              <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-8 leading-tight tracking-wide whitespace-nowrap">
+              <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold mb-8 leading-tight tracking-wide whitespace-nowrap">
                 QUALIDADE E EXPERIÊNCIA
               </h1>
               <button
@@ -653,6 +653,15 @@ export default function Home() {
                     <span className="text-xl font-bold text-gray-900">25,00</span>
                   </div>
 
+                  <div className="flex items-center justify-between py-4 border-b border-gray-200">
+                    <div className="flex items-center gap-4">
+                      <div className="w-8 h-8">
+                        <img src="/assets/tesoura.png" alt="Tesoura" className="w-full h-10" />
+                      </div>
+                      <span className="text-lg font-medium text-gray-800">CABELO E BARBA</span>
+                    </div>
+                    <span className="text-xl font-bold text-gray-900">60,00</span>
+                  </div>
 
                   <div className="flex items-center justify-between py-4 border-b border-gray-200">
                     <div className="flex items-center gap-4">
@@ -661,7 +670,7 @@ export default function Home() {
                       </div>
                       <span className="text-lg font-medium text-gray-800">SOMBRANCELHA</span>
                     </div>
-                    <span className="text-xl font-bold text-gray-900">10,00</span>
+                    <span className="text-xl font-bold text-gray-900">15,00</span>
                   </div>
 
                   <div className="flex items-center justify-between py-4">
@@ -671,7 +680,7 @@ export default function Home() {
                       </div>
                       <span className="text-lg font-medium text-gray-800">PEZINHO</span>
                     </div>
-                    <span className="text-xl font-bold text-gray-900">15,00</span>
+                    <span className="text-xl font-bold text-gray-900">10,00</span>
                   </div>
                 </div>
 

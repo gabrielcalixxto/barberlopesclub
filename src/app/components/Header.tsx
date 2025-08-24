@@ -56,7 +56,7 @@ export default function Header() {
           </div>
         </div>{/* Mobile menu button */}
         <button 
-          className="lg:hidden fixed top-6 right-6 p-2 text-white hover:text-blue-400 transition-colors z-[9999]"
+          className="lg:hidden p-2 text-white hover:text-blue-400 transition-colors z-[9999]"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -71,7 +71,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-black/95 backdrop-blur-md">
+        <div className="lg:hidden mr-28 bg-black/95 backdrop-blur-md">
           <div className="px-6 py-8 space-y-6 text-center">
             <Link 
               href="#inicio" 
