@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
-import { apiRequest, API_CONFIG } from "@/app/utils/api";
+// import { apiRequest, API_CONFIG } from "@/app/utils/api";
 import { User } from "@/app/types";
 import { openPopup } from "@/app/utils/popup";
 
@@ -70,34 +70,34 @@ export default function LoginModal({ isOpen, onClose, onSwitchToCadastro, onLogi
 
   const handleGoogleLogin = useCallback(async () => {
     setErro(''); // Limpar erros anteriores
-    try {
-      // Buscar configurações do Google OAuth do backend
-      const googleConfig = await apiRequest(API_CONFIG.endpoints.auth.googleConfig, {
-        method: 'GET',
-      });
+    // try {
+    //   // Buscar configurações do Google OAuth do backend
+    //   const googleConfig = await apiRequest(API_CONFIG.endpoints.auth.googleConfig, {
+    //     method: 'GET',
+    //   });
       
-      if (!googleConfig || !googleConfig.clientId) {
-        setErro('Google OAuth não está configurado no servidor.');
-        return;
-      }
+    //   if (!googleConfig || !googleConfig.clientId) {
+    //     setErro('Google OAuth não está configurado no servidor.');
+    //     return;
+    //   }
 
-      // Construir URL de redirect baseada na URL atual
-      const redirectUri = `${window.location.origin}/auth/google/callback`;
+    //   // Construir URL de redirect baseada na URL atual
+    //   const redirectUri = `${window.location.origin}/auth/google/callback`;
       
-      const googleAuthUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${googleConfig.clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=openid%20profile%20email&response_type=code&state=login`;
+    //   const googleAuthUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${googleConfig.clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=openid%20profile%20email&response_type=code&state=login`;
       
-      // Abrir popup
-      openPopup(googleAuthUrl, 'Login Google', 500, 600);
+    //   // Abrir popup
+    //   openPopup(googleAuthUrl, 'Login Google', 500, 600);
 
-    } catch (error) {
-      console.error('Erro ao buscar configurações do Google:', error);
-      // Se for 404, significa que o Google OAuth não está implementado no backend
-      if (error instanceof Error && error.message.includes('404')) {
-        setErro('Google OAuth não está disponível no momento. Use email e senha.');
-      } else {
-        setErro('Erro ao configurar autenticação com Google. Tente novamente.');
-      }
-    }
+    // } catch (error) {
+    //   console.error('Erro ao buscar configurações do Google:', error);
+    //   // Se for 404, significa que o Google OAuth não está implementado no backend
+    //   if (error instanceof Error && error.message.includes('404')) {
+    //     setErro('Google OAuth não está disponível no momento. Use email e senha.');
+    //   } else {
+    //     setErro('Erro ao configurar autenticação com Google. Tente novamente.');
+    //   }
+    // }
   }, []);// Nenhuma dependência de props ou state é necessária aqui
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -109,33 +109,33 @@ export default function LoginModal({ isOpen, onClose, onSwitchToCadastro, onLogi
     console.log('🔑 Senha:', formData.password ? '***oculta***' : 'VAZIA!');
     console.log('📊 Form Data completo:', { ...formData, password: '***oculta***' });
 
-    try {      const loginData = {
-        username: formData.email,
-        password: formData.password
-      };
+    // try {      const loginData = {
+    //     username: formData.email,
+    //     password: formData.password
+    //   };
       
-      console.log('📤 Enviando dados:', { ...loginData, password: '***oculta***' });
+    //   console.log('📤 Enviando dados:', { ...loginData, password: '***oculta***' });
       
-      const response = await apiRequest(API_CONFIG.endpoints.auth.login, {
-        method: 'POST',
-        body: JSON.stringify(loginData),
-      });
+    //   const response = await apiRequest(API_CONFIG.endpoints.auth.login, {
+    //     method: 'POST',
+    //     body: JSON.stringify(loginData),
+    //   });
 
-      console.log('✅ Login bem-sucedido!', response);
+    //   console.log('✅ Login bem-sucedido!', response);
 
-      // Login realizado com sucesso
-      localStorage.setItem("user", JSON.stringify(response.usuario));
-      localStorage.setItem("token", response.token);
+    //   // Login realizado com sucesso
+    //   localStorage.setItem("user", JSON.stringify(response.usuario));
+    //   localStorage.setItem("token", response.token);
       
-      onLoginSuccess(response.usuario);
-      handleClose(); // Limpa o estado e fecha o modal
+    //   onLoginSuccess(response.usuario);
+    //   handleClose(); // Limpa o estado e fecha o modal
       
-    } catch (error) {
-      console.error('❌ Erro no login:', error);
-      const errorMessage = error instanceof Error ? error.message : "Erro ao conectar com o servidor";
-      setErro(errorMessage);
-      console.error("Erro no login:", error);
-    }
+    // } catch (error) {
+    //   console.error('❌ Erro no login:', error);
+    //   const errorMessage = error instanceof Error ? error.message : "Erro ao conectar com o servidor";
+    //   setErro(errorMessage);
+    //   console.error("Erro no login:", error);
+    // }
 
     setLoading(false);
   };
